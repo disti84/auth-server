@@ -19,16 +19,6 @@ const express = require('express'),
     app.use(cors());  
     app.use('/auth', authRoute);  
     app.use('/social', socialRoute);
-       //socket
-   var http = require('http').Server(app);
-   var io = require('socket.io')(http);
-   io.on('connection', () =>{
-    console.log('a user is connected')
-   })
-   io.on('connection', socket => {
-    socket.emit('connection-event', () =>
-    "connected");
-    });
     const port = process.env.PORT || 4500;  
     const server = app.listen(port, function(){  
      console.log('Listening on port ' + port);  
