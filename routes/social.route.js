@@ -28,20 +28,6 @@ socialRoutes.route('/token').post(function (req, res) {
                         return res.status(200).send({ auth: true, user: user, token: credentials.token, refreshToken: credentials.refreshToken });
                 });
             }
-            //dopo l'app fara l'add dello user sul DB Resource. per fare l'add l'applicazione passarà l'access token e il resource server validerà il token mediante l'auth server
-            // User.findOne({ 'google.id': credentials.id }, function (err, user) {
-            //     if (err) return res.status(500).send("There was a problem finding the user.");
-            //     if (user) return res.status(404).send("User found. ");
-            //     let tempUser = new User({ method: login.type, google: { email: credentials.email, id: credentials.id, name: credentials.name, pic: credentials.pic } });
-            //     User.save(tempUser, function (err, user) {
-            //         if (err) {
-            //             return res.status(500).json({ 'err': err });
-            //         }
-            //         else {
-            //             return res.status(200).send({ auth: true, user: user, token: credentials.token, refreshToken: credentials.refreshToken });
-            //         }
-            //     });
-            // });
         });
     } catch (error) {
         res.status(500).json({ error: 'Internal server error' });
