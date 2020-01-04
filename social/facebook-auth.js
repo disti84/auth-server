@@ -61,7 +61,13 @@ module.exports.getUser = code => {
         email_verified: true,
         email: email
       };
-      return user;
+      return {
+        name: user.name,
+        pic: user.pic,
+        id: user.id,
+        email_verified: user.email_verified,
+        email: user.email,
+      };
     })
 
     .catch(err => {
