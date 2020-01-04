@@ -1,5 +1,5 @@
 # oauth2-test
-Oauth2 and socket-test server
+oauth2-test
 Simple authorization server using access token and refresh token and provide a google and facebook login.
 ## run locally 
 
