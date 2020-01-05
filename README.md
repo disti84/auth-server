@@ -1,4 +1,4 @@
-# oauth2-test
+# auth-server
 Simple authorization server based on access token and refresh token architecture and provide a google and facebook login.
 ## run locally 
 
